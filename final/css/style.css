@@ -276,8 +276,7 @@ body {
   background-color: #f9f7f6;
   grid-column: col-start 5 / full-end;
   padding: 6rem 8vw;
-
-/*         
+  /*
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -442,3 +441,30 @@ body {
   margin-left: auto;
   text-align: center;
   width: 70%; }
+
+.gallery__img {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.gallery__img.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.home {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.home.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.home.hover-scale {
+    transition: transform 0.3s ease;
+    transform: scale(1.05);
+}
